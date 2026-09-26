@@ -3,6 +3,18 @@
   "rewrites": [
     {
       "source": "/telegram/:path*",
+      "destination": "/api/telegram/:path*"
+    },
+    {
+      "source": "/tg-webhook/:path*",
+      "destination": "/api/webhook/:path*"
+    }
+  ]
+}{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/telegram/:path*",
       "destination": "https://api.telegram.org/:path*"
     }
   ]
